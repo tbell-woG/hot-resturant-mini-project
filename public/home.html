@@ -21,10 +21,16 @@
             <a class="btn btn-danger btn-lg" href="#" role="button" id="res-btn">Click to see Reservations</a>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
-        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-        <script src="button.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $("#res-btn").on("click", function(event) {
+          event.preventDefault();
+          window.open('/reservations')
+          });
+          $("#table-btn").on("click", function(event) {
+          event.preventDefault();
+          window.open('/booktable')
+          });
+      </script>
 </body>
-
-
 </html>

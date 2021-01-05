@@ -1,1 +1,0 @@
-# hot-resturant-mini-project

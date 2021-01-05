@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserve</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Hot Restaurant</title>
 </head>
-
 <body>
     <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="pt-2" style="width: 500px;">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Make Reservation</label>
-                    <input type="text" class="form-control" id="inputresName" aria-describedby="emailHelp"
-                        placeholder="Enter Name">
-                    <small id="emailHelp" class="form-text text-muted">Enter Your Name To Make a Reservation</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Enter Phone Number</label>
-                    <input type="number" class="form-control" id="inputphonenumber" placeholder="Phone Number">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Reservation</button>
-
-            </form>
-
-        </div>
-        <div class="d-flex flex-row pt-2">
-            <button type="submit" class="btn btn-primary">Home</button>
-            <button type="submit" class="btn btn-danger">Tables</button>
-        </div>
+    <div class="pt-2" style="width: 500px;">
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Make Reservation</label>
+              <input type="text" class="form-control" id="inputresName" aria-describedby="emailHelp" placeholder="Enter Name">
+              <small id="emailHelp" class="form-text text-muted">Enter Your Name To Make a Reservation</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Enter Phone Number</label>
+              <input type="number" class="form-control" id="inputphonenumber" placeholder="Phone Number">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Submit Reservation</button>
+        </form>
+          
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
-        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <div class="d-flex flex-row pt-2">
+    <button type="submit" class="btn btn-primary">Home</button>
+    <button type="submit" class="btn btn-danger">Tables</button>
+    </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $("#submit").on("click", function(event) {
+          event.preventDefault();
+          var newReservation = {
+              name: $("#inputresName").val().trim(),
+              phone_number: $("#inputphonenumber").val().trim(),
+        };
+          console.log(newReservation)
+          });
+      </script>
 </body>
-
-
 </html>
